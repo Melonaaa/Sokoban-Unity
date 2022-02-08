@@ -10,12 +10,11 @@ public class Rotator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        myTransform.Rotate(60, 60, 60);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        myTransform.Rotate(60 * Time.deltaTime, 60 * Time.deltaTime, 60 * Time.deltaTime);
     }
 }

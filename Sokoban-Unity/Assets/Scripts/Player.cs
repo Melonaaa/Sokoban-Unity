@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public GameManager _GameManager;
+
     public float _Speed = 10f;
     Rigidbody PlayerRigidbody;
 
@@ -16,6 +18,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (_GameManager._IsGameOver)
+            return;
+
         float inputX = Input.GetAxis("Horizontal");
         float inputY = Input.GetAxis("Vertical");
 
